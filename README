@@ -1,0 +1,46 @@
+Set Up
+------
+1. Install required packages by running the below command from root project directory:
+pip install -r requirements.txt
+2. Populate account credentials in credentials.py with valid email and password
+
+Running tests
+-----------------------
+To run all tests from console, run the below command from the root project directory:
+pytest -v --html=report.html
+
+To run any specific test, run the below command from the root project directory:
+pytest test_save_update_search.py::<text_name> -v --html=report.html
+for example:
+pytest test_save_update_search.py::test_default_search_and_save -v --html=report.html
+
+Test run will generate report.html file in the root project directory with detailed report for all executed tests.
+
+
+HTML Test Reports
+-----------------
+I am also providing test report generated from my test run in a separate directory:
+- ./html_reports
+
+
+Some other test cases for Save Search functionality:
+-----------------------------------------------
+1. Validate all default filter values are displayed correctly on a Save Search screen
+2. Validate clearing all search filters
+3. Validate user can change any search filter selection/range
+4. Validate non-default filter values are displayed correctly on a Save Search screen
+5. Validate user cannot save search without specifying search name
+6. Validate user cannot save search using name that already exists in saved searches
+7. Validate user can successfully select custom date range for search
+8. Validate user cannot select date range exceeding allowed range noted in the specs
+9. Validate date range for the search is displayed correctly on a Save Search screen
+10. Validate `No End Date` flag on a Save Search screen works correctly
+11. Validate `Email notification` flag on a Save Search screen works correctly
+12. Validate creating search folder works correctly
+13. Validate Save Search screen has all expected elements present, including wording and spelling in text elements
+14. Validate `Save as new search` option when updating existing search works as expected
+15. Validate map view on Save Search screen displays correct area
+16. Validate allowed length of search name input on Save Search screen corresponds to the allowed length noted in the specs
+17. Validate user can close Save Search screen without saving the search and get back to explorer screen
+18. If there is a limit to number of allowed saved searches, validate user cannot save more searches than allowed
+19. Validate all of the above works in different browsers
