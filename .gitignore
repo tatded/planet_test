@@ -5,6 +5,7 @@
 # instead I will provide example reports in ./html-reports
 assets
 *.html
+!html_reports/report.html
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
